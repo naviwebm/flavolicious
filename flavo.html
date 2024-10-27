@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flavolicious Drinks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #0099ff;
+            padding: 20px;
+            text-align: center;
+            color: yellow;
+        }
+
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+
+        .nav-bar {
+            display: flex;
+            justify-content: center;
+            background-color: #ffff33;
+            padding: 10px 0;
+        }
+
+        .nav-bar a {
+            color: royalblue;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .nav-bar a:hover {
+            background-color: #ff4500;
+        }
+
+        .hero {
+            background-image: url('thai-teajpg-20240414010635.jpg'); /* Ganti dengan gambar yang diinginkan */
+            background-size: cover;
+            padding: 60px;
+            text-align: center;
+            color: white;
+            }
+
+        .home-background {
+            background-image: url('lake-192990_1280.jpg'); /* Ganti dengan URL gambar latar belakang yang diinginkan */
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+
+         .home-background h2 {
+            font-size: 3em;
+            animation: fadeIn 2s;
+        }
+
+        .flavors-background {
+            background-image: url('trees-4896953_1920.jpg');
+            background-size: cover;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+
+         @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .content {
+            padding: 40px;
+            text-align: center;
+            display: none; /* Hide content initially */
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .content.active {
+            display: block; /* Show when active */
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .content h2 {
+            color: #ff4500;
+            font-size: 2.5em;
+        }
+
+        .content {
+            display: none; /* Tampilkan isi berdasarkan tab yang dipilih */
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin: 20px;
+            border-radius: 8px;
+        }
+
+        .active {
+            display: block; /* Tampilkan elemen aktif */
+        }
+
+         .product {
+            display: inline-block;
+            width: 300px;
+            margin: 20px;
+            text-align: left;
+            border: 2px solid #ffa07a;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background-color: #fff5ee;
+        }
+
+        .product img {
+            width: 100%;
+            height: 400px;
+            border-bottom: 2px solid #ff4500;
+        }
+
+        .product .info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .product h3 {
+            color: #ff6347;
+            margin-top: 0;
+        }
+
+        .product p {
+            color: #696969;
+        }
+
+        footer {
+            background-color: #ffcc00;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Animasi untuk teks */
+        @keyframes textAnimation {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .animated-text {
+            animation: textAnimation 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Flavolicious Drinks</h1>
+    </header>
+
+    <div class="nav-bar">
+        <a href="#home" onclick="showHome()">Home</a>
+        <a href="#flavors" onclick="showFlavors()">Flavors</a>
+        <a href="#about" onclick="showAbout()">About Us</a>
+        <a href="#contact" onclick="showContact()">Contact</a>
+    </div>
+
+    <div class="hero">
+        <h2 class="animated-text">RASAKAN KESEGARAN YANG NIKMAT!
+                                  SENSASI SEGAR TIADA HENTI</h2>
+    </div>
+
+    <div class="home-background">
+        <h2>Welcome to Flavolicious!</h2>
+    </div>
+
+ 
+
+
+   <div class="content" id="flavors-section">
+        <h2>Our Flavors</h2>
+        <div class="product">
+            <img src="9e94ca5969f8dd61b5967a305e0ac4f5.jpg" alt="Strawberry Splash">
+            <div class="info">
+                <h3>LECI</h3>
+                <p>RASA SEGAR DAN MANIS DARI LECI AKAN MEMBOOSTER MOOD MU 100 PERSEN.</p>
+            </div>
+        </div>
+        <div class="product">
+            <img src="feedImage_2023_11_9_1699521299091-9nooy.png" alt="Mango Tango">
+            <div class="info">
+                <h3>CAPPUCHINO</h3>
+                <p>SENSASI KOPI DI CAMPUR SUSU DENGAN ES DAN CINCAU AKAN MEMBUAT SENSASI SEGAR DAN BIKIN MELEK!</p>
+            </div>
+        </div>
+        <div class="product">
+            <img src="istockphoto-1484219825-612x612.jpg" alt="Blueberry Bliss">
+            <div class="info">
+                <h3>THAI TEA</h3>
+                <p>THAI TEA DI BUAT DENGAN TEH ASLI DARI THAILAND YANG CREAMY DAN SEGAR, MINUMAN ANTI MAINSTREAM COCOK DISEGALA KONDISI.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="content" id="about-section">
+        <h2>About Us</h2>
+        <p>FLAVOLICIOUS ITU SENDIRI MERUPAKAN MINUMAN CIPTAAN 4 MAHASISWA UNIVERSITAS IBNU KHALDUN BOGOR, MEREKA BEREMPAT MENCIPTAKAN MINUMAN INI KARNA BOSAN MEMBELI MINUMAN PINGGIR JALAN YANG ITU ITU AJA DAN KURANG SEHAT BAGI KONSUMEN, MEREKA MEMILIKI IDE IDE KREATIF DAN INGIN MEMAJUKAN MARKETING DALAM BIDANG MINUMAN DALAM BENTUK DIGITAL, MEREKA MEMILIKI JIWA WIRAUSAHA DAN MAMPU MENGAMBIL KESEMPATAN DALAM KESEMPITAN, UNTUK SAAT INI FLAVOLICIOUS SENDIRI TELAH MEMILIKI 3 RASA YANG BERBEDA DAN MINUMAN INI TERLAH TERSEBAR DI DAERAH JABODETABEK DALAM BENTUK FRANCHISE!</p>
+    </div>
+
+    <div class="content" id="contact-section">
+        <h2>Contact Us</h2>
+        <p>INGIN BERGABUNG UNTUK BERJUALAN FRANCHISE INI HUBUNGI KAMI <a href="flavolicious@drinkmail.com">info@flavolicious.com</a>.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Flavolicious. Taste the Difference!</p>
+    </footer>
+
+    <script>
+        function showFlavors() {
+            hideAllSections();
+            var flavorsSection = document.getElementById("flavors-section");
+            flavorsSection.classList.add("active");
+            flavorsSection.scrollIntoView({ behavior: "smooth" });
+        }
+
+        function showAbout() {
+            hideAllSections();
+            var aboutSection = document.getElementById("about-section");
+            aboutSection.classList.add("active");
+            aboutSection.scrollIntoView({ behavior: "smooth" });
+        }
+
+        function showContact() {
+            hideAllSections();
+            var contactSection = document.getElementById("contact-section");
+            contactSection.classList.add("active");
+            contactSection.scrollIntoView({ behavior: "smooth" });
+        }
+
+        function showHome() {
+            hideAllSections();
+            var homeSection = document.querySelector(".home-background");
+            homeSection.classList.add("active");
+        }
+
+        function hideAllSections() {
+            document.querySelectorAll(".content").forEach(section => {
+                section.classList.remove("active");
+            });
+        }
+    </script>
+</body>
+</html>
